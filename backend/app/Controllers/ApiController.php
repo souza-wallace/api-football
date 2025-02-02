@@ -75,7 +75,7 @@ class ApiController {
 
             $currentYear = date('Y');
             if ($ano < 2018 || $ano > $currentYear) {
-                return Flight::json(["erro" => 'O ano deve estar entre 1900 e $currentYear.'], 400);
+                return Flight::json(["erro" => "O ano deve estar entre 2018 e $currentYear."], 400);
             }
 
             if ($rodada <= 0) {
@@ -118,8 +118,8 @@ class ApiController {
      */
     public function getTeamsByCountry(string $country) {
         try {
-            if (strlen($country) !== 2) {
-                throw new InvalidArgumentException("O código do país deve ter 2 caracteres.");
+            if (empty($country)) {
+                return Flight::json(["erro" => 'O nome do país deve ser um nome válido.'], 400);
             }
 
             $data = $this->sportsApiService->getTeamsByCountry($country);
@@ -140,7 +140,7 @@ class ApiController {
         try {
             // Validação: ID deve ser um número inteiro positivo
             if ($id <= 0) {
-                throw new InvalidArgumentException("O ID do time deve ser um número positivo.");
+                return Flight::json(["erro" => 'O ID do time deve ser um número positivo.'], 400);
             }
 
             $data = $this->sportsApiService->getTeamById($id);
@@ -159,15 +159,15 @@ class ApiController {
      * @param int $team O ID do time.
      * @param int $ano O ano da temporada.
      */
-    public function statistics(int $id, int $team, int $ano) {
+    public function getTeamStatistics(int $id, int $team, int $ano) {
         try {
             if ($id <= 0 || $team <= 0) {
-                throw new InvalidArgumentException("Os IDs da liga e do time devem ser números positivos.");
+                return Flight::json(["erro" => 'Os IDs da liga e do time devem ser um número positivo.'], 400);
             }
 
             $currentYear = date('Y');
             if ($ano < 2018 || $ano > $currentYear) {
-                throw new InvalidArgumentException("O ano deve estar entre 1900 e $currentYear.");
+                return Flight::json(["erro" => "O ano deve estar entre 2018 e $currentYear."], 400);
             }
 
             $data = $this->sportsApiService->getStatistics($id, $team, $ano);

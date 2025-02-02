@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "3795a518-c216-413e-a57a-697f63cd2dc1",
+		"name": "APIFootball",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20798479",
+		"_collection_link": "https://red-crater-436635.postman.co/workspace/Team-Workspace~f15c9712-09da-4102-8b0d-93465958bacb/collection/20798479-3795a518-c216-413e-a57a-697f63cd2dc1?action=share&source=collection_link&creator=20798479"
+	},
+	"item": [
+		{
+			"name": "get team",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/team6"
+			},
+			"response": []
+		},
+		{
+			"name": "statistics",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/team/statistics/71/6/2022"
+			},
+			"response": []
+		},
+		{
+			"name": "team por pais",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/teams/Brazil"
+			},
+			"response": []
+		},
+		{
+			"name": "leagues pais",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"key": "9ac317f81a968573ed02d0c2ed6f2626",
+						"value": "",
+						"in": "header"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/leagues/country/Brazil"
+			},
+			"response": []
+		},
+		{
+			"name": "countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"key": "9ac317f81a968573ed02d0c2ed6f2626",
+						"value": "",
+						"in": "header"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/countries"
+			},
+			"response": []
+		},
+		{
+			"name": "league info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"key": "9ac317f81a968573ed02d0c2ed6f2626",
+						"value": "",
+						"in": "header"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": "127.0.0.1:8000/leagues/71/season/2020/round/1"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "127.0.0.1:8000"
+		},
+		{
+			"value": ""
+		}
+	]
+}
