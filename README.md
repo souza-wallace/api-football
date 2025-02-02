@@ -54,8 +54,10 @@ docker compose up -d --build
 cd ..
 cd frontend
 ```
+builde a imagem e depois execute o container
 ```
 docker build -t frontend .
+docker run -d -p 5173:5173 --name frontend-container frontend
 ```
 
 

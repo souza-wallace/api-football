@@ -37,4 +37,11 @@ Flight::route('/teams/country/@country', [$apiController, 'getTeamsByCountry']);
 Flight::route('/teams/@id', [$apiController, 'getTeamById']); // Detalhes de um time
 Flight::route('/teams/@id/statistics/season/@season/league/@league', [$apiController, 'getTeamStatistics']); // Estatísticas do time
 
+Flight::route('/', function(){
+  http_response_code(200);
+  echo json_encode([
+      "message" => 'its working'
+  ]);
+});
+
 Flight::start();
