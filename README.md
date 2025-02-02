@@ -55,7 +55,7 @@ cd ..
 cd frontend
 ```
 ```
-docker compose up -d --build
+docker build -t frontend .
 ```
 
 
