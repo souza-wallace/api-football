@@ -17,6 +17,22 @@ git clone https://github.com/souza-wallace/api-football.git
 ```
 cd api-football
 ```
+Configurar Variáveis de Ambiente do Backend
+
+Antes de rodar o backend, é necessário criar um arquivo .env dentro da pasta backend e adicionar as seguintes variáveis:
+
+```
+API_SPORTS=https://v3.football.api-sports.io
+API_KEY_SPORTS=<SUA_API_KEY>
+```
+
+Para gerar sua API Key, siga os passos:
+
+Crie uma conta em [API-FOOTBALL](https://dashboard.api-football.com/login)
+
+Acesse seu perfil em [API-FOOTBALL Profile](https://dashboard.api-football.com/profile?access)
+
+Copie o valor da API Key e cole na variável API_KEY_SPORTS dentro do .env.
 
 # 🚀 Executando o projeto com Docker
 
@@ -86,6 +102,11 @@ npm run dev
 Acesse:
 ```
 http://localhost:5173/
+```
+
+Voce ira encontrar um arquivo json no caminho abaixo, esse arquivo contem os endpoints da api, caso queria testar-los é só importar o arquivo em seu client (postman, insomnia).
+```
+cd backend/api
 ```
 # 📜 Referências
 
