@@ -29,4 +29,4 @@ frontend/*.sw?
 
 frontend/*.tsbuildinfo
 backend/vendor
-backend/.env
+# backend/.env //subir o env para facilitar teste
